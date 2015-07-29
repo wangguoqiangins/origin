@@ -40,7 +40,6 @@ public class GuideActivity extends FragmentActivity implements View.OnClickListe
         SharedPreferences.Editor editor = sp.edit();
         editor.putString(TaskConstants.SP_KEY_GUIDE_FIRST_RUN, versionName);
         editor.commit();
-
         ArrayList<Integer> images = new ArrayList<Integer>();
         for (int i = 0; i < 4; i++) {
             images.add(R.mipmap.ic_launcher);}

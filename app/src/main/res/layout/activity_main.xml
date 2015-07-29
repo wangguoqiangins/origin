@@ -6,38 +6,49 @@
                 tools:context=".MainActivity">
 
 
-    <TabHost
-            android:id="@+id/main_tab_host"
+    <!-- fragment容器-->
+    <FrameLayout
+            android:id="@+id/main_fragment_container"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
-        </TabWidget>
-        <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-               android:layout_height="match_parent">
-
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    android:id="@+id/main_tab_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    android:id="@+id/main_tab_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-            </LinearLayout>
-        </FrameLayout>
-    </TabHost>
+    </FrameLayout>
+    <!-- tab-->
+    <RadioGroup
+            android:id="@+id/main_tab_bar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioButton
+                android:id="@+id/main_tab_item_discover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="发现"/>
+        <RadioButton
+                android:id="@+id/main_tab_item_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="定制听"/>
+        <RadioButton
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <RadioButton
+                android:id="@+id/main_tab_item_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="下载听"/>
+        <RadioButton
+                android:id="@+id/main_tab_item_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我"/>
+    </RadioGroup>
 
 </LinearLayout>
