@@ -12,6 +12,25 @@ public class ClientDiscoverAPI {
 
     }
 
+    /**
+     * 获取发现界面tab的定义<br/>
+     * 调用接口：http://mobile.ximalaya.com/mobile/discovery/v1/tabs?device=android
+     * @return
+     */
+    public static String getDiscoverTabs(){
+        String ret = null;
+        String url = SERVER_MOBILE + "/mobile/discovery/v1/tabs?device=android";
+        byte[] bytes = HttpUtil.doGet(url);
+        if (bytes != null){
+            try {
+                ret  = new String(bytes,"utf-8");
+            } catch (UnsupportedEncodingException e) {
+                ret = new String(bytes);
+            }
+        }
+        return  ret;
+    }
+
     ////////////////////////////////////////
 
     /**
@@ -44,6 +63,25 @@ public class ClientDiscoverAPI {
                 ret = new String(data);
             }
         }
+        return ret;
+    }
+
+    /**
+     * 获取发现的分类<br/>http://mobile.ximalaya.com/mobile/discovery/v1/categories?device=android&picVersion=10&scale=2
+     * @return
+     */
+    public static String getDiscoverCateries() {
+        String ret = null;
+        String url = SERVER_MOBILE + "/mobile/discovery/v1/categories?device=android&picVersion=10&scale=2";
+        byte[] bytes = HttpUtil.doGet(url);
+        if(bytes != null){
+            try {
+                ret = new String(bytes,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        }
+
         return ret;
     }
 }

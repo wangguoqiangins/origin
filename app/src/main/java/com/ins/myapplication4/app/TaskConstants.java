@@ -14,4 +14,6 @@ public class TaskConstants {
      * 教程页是否第一次
      */
     public static final String SP_KEY_GUIDE_FIRST_RUN = "gfr";
+    public static final int TASK_DISCOVER_TAGS = 2;
+    public static final int TASK_DISCOVER_CATEGORIES = 3;
 }
