@@ -19,7 +19,7 @@ import com.ins.myapplication4.app.fragments.ProfileFragment;
 /**
  * 主界面
  */
-public class MainActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
     private DiscoverFragment discoverFragment;
     private CustomFragment customFragment;
     private DownloadTingFragment downloadTingFragment;
